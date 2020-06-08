@@ -11,8 +11,12 @@ There is no way to download the plugins using Terrafrom so the user has to compi
 
 ### Prerequisites
 
-- You must have vagrant installed.Download from [here](https://www.vagrantup.com/downloads)
-- You must have virtualbox installed.Download from [here](https://www.virtualbox.org/wiki/Downloads)
+- You must have vagrant installed.
+Download from [here](https://www.vagrantup.com/downloads)
+
+- You must have virtualbox installed.
+Download from [here](https://www.virtualbox.org/wiki/Downloads)
+
 - The custom provider we will use is able to work with Terraform v0.11.14 and go v1.10 using different version may be not compatible.
 
 *Keep in mind the provided instruction is meant to be applied on MacOS. It could vary for different OS types*
@@ -49,11 +53,15 @@ There is no way to download the plugins using Terrafrom so the user has to compi
 
 8. Create a project folder and copy the plugin to the `terraform.d` folder
 
-`mkdir -p /vagrant/terraform_project/terraform.d/plugins/linux_amd64; cp ~/go/bin/terraform-provider-extip /vagrant/terraform_project/terraform.d/plugins/linux_amd64/`
+```
+mkdir -p /vagrant/terraform_project/terraform.d/plugins/linux_amd64
+cp ~/go/bin/terraform-provider-extip /vagrant/terraform_project/terraform.d/plugins/linux_amd64/
+```
 
 9. Go to project folder to test the plugin
 
 `cd /vagrant/terraform_project`
+
 ```hcl
 cat main.tf
 
